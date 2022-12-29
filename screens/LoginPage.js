@@ -39,17 +39,23 @@ export default function Login() {
         }
         setLoading(true);
 
-        navigation.replace("Home");
+        navigation.replace("home");
     };
 
     return (
         <SafeAreaView style={CONSTANTS.AndroidSafeArea}>
             <View className="bg-white min-h-full max-h-screen">
-                <View>
+                <View className="w-72 h-72 flex items-center justify-center mx-auto">
                     <Image
                         source={logo}
-                        className="object-cover border-2 w-2/3 mx-auto mt-10"
-                        resizeMode="cover"
+                        className="object-cover border-2  mx-auto "
+                        resizeMode="contain"
+                        style={{
+                            flex: 1,
+                            width: "100%",
+                            height: "100%",
+                            resizeMode: "contain",
+                        }}
                     />
                 </View>
                 <View>
@@ -100,13 +106,10 @@ export default function Login() {
                                 LOGIN
                             </Text>
                         </TouchableOpacity>
-                        <Text
-                            className="text-lg text-gray-600 mt-8"
-                            onPress={() => navigation.navigate("Home")}
-                        >
+                        <Text className="text-lg text-gray-600 mt-8">
                             New Here ?{" "}
                             <Text
-                                onPress={() => navigation.navigate("Home")}
+                                onPress={() => navigation.navigate("register")}
                                 className="text-gray-800 font-bold"
                             >
                                 Register

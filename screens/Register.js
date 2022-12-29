@@ -39,21 +39,44 @@ export default function Register() {
         }
         setLoading(true);
 
-        navigation.replace("Home");
+        navigation.replace("home");
     };
 
     return (
         <SafeAreaView style={CONSTANTS.AndroidSafeArea}>
             <View className="bg-white min-h-full max-h-screen">
-                <View>
+                <View className="w-72 h-72 flex items-center justify-center mx-auto">
                     <Image
                         source={logo}
-                        className="object-cover border-2 w-2/3 mx-auto mt-10"
-                        resizeMode="cover"
+                        className="object-cover border-2  mx-auto "
+                        resizeMode="contain"
+                        style={{
+                            flex: 1,
+                            width: "100%",
+                            height: "100%",
+                            resizeMode: "contain",
+                        }}
                     />
                 </View>
                 <View>
                     <View className="space-y-3 mt-20 flex flex-col items-center">
+                        <TextInput
+                            onChangeText={(UserEmail) =>
+                                setUserEmail(UserEmail)
+                            }
+                            className="w-80 border-2 border-gray-200 px-3 py-2 mx-auto rounded-full"
+                            placeholder="Enter Full Name"
+                            placeholderTextColor="#8b9cb5"
+                            autoCapitalize="none"
+                            keyboardType="email-address"
+                            returnKeyType="next"
+                            onSubmitEditing={() =>
+                                passwordInputRef.current &&
+                                passwordInputRef.current.focus()
+                            }
+                            underlineColorAndroid="#f000"
+                            blurOnSubmit={false}
+                        />
                         <TextInput
                             onChangeText={(UserEmail) =>
                                 setUserEmail(UserEmail)
@@ -97,19 +120,19 @@ export default function Register() {
                             onPress={handleSubmitPress}
                         >
                             <Text className="focus:outline-none text-white bg-red-500 hover:bg-red-600 focus:ring-4 font-medium rounded-full text-sm px-3 py-4 shadow  w-80 text-center">
-                                LOGIN
+                                Create Account
                             </Text>
                         </TouchableOpacity>
                         <Text
                             className="text-lg text-gray-600 mt-8"
                             onPress={() => navigation.navigate("Home")}
                         >
-                            New Here ?{" "}
+                            Already a member ?{" "}
                             <Text
                                 onPress={() => navigation.navigate("Home")}
-                                className="text-gray-800 font-bold"
+                                className="text-gray-800 font-bold capitalize"
                             >
-                                Register
+                                login
                             </Text>
                         </Text>
                     </View>
