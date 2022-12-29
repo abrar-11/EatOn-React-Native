@@ -12,7 +12,7 @@ import {
 import { logo } from "../CONSTANTS";
 import CONSTANTS from "../CONSTANTS";
 // import logo from "../assets/eaton-1.png";
-export default function Login() {
+export default function Register() {
     const navigation = useNavigation();
     const [userEmail, setUserEmail] = useState("");
     const [userPassword, setUserPassword] = useState("");

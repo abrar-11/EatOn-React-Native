@@ -1,8 +1,9 @@
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
-import { SafeAreaView, Text, View } from "react-native";
+import { Image, SafeAreaView, Text, View } from "react-native";
+import { logo } from "../CONSTANTS";
 import CONSTANTS from "../CONSTANTS";
-
+// import logo from "../assets/eaton-1.png";
 export default function HomeScreen() {
     const navigation = useNavigation();
     useLayoutEffect(() => {
@@ -12,8 +13,15 @@ export default function HomeScreen() {
     }, []);
     return (
         <SafeAreaView style={CONSTANTS.AndroidSafeArea}>
+            <View className="bg-gray-100 ">
+                <Image
+                    source={logo}
+                    className="object-cover"
+                    resizeMode="cover"
+                />
+            </View>
             <View>
-                <Text>Home Screen</Text>
+                <Text>Home</Text>
             </View>
         </SafeAreaView>
     );

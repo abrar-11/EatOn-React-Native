@@ -7,3 +7,6 @@ export default StyleSheet.create({
       paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
     }
   });
+
+
+  export const logo = require("./assets/images/logo.png")
