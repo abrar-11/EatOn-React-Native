@@ -13,9 +13,9 @@ export default function App() {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen name="spalsh" component={SplashScreen} />
+                {/* <Stack.Screen name="spalsh" component={SplashScreen} />
                 <Stack.Screen name="login" component={LoginPage} />
-                <Stack.Screen name="register" component={Register} />
+                <Stack.Screen name="register" component={Register} /> */}
                 <Stack.Screen name="home" component={HomeScreen} />
             </Stack.Navigator>
         </NavigationContainer>
