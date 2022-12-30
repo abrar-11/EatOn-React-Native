@@ -15,6 +15,7 @@ import CONSTANTS from "../CONSTANTS";
 export default function Register() {
     const navigation = useNavigation();
     const [userEmail, setUserEmail] = useState("");
+    const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const [errortext, setErrortext] = useState("");
@@ -29,12 +30,16 @@ export default function Register() {
 
     const handleSubmitPress = () => {
         setErrortext("");
+        if (!userName) {
+            alert("Please Enter Name");
+            return;
+        }
         if (!userEmail) {
-            alert("Please fill Email");
+            alert("Please Enter Email");
             return;
         }
         if (!userPassword) {
-            alert("Please fill Password");
+            alert("Please Enter Password");
             return;
         }
         setLoading(true);
@@ -61,8 +66,8 @@ export default function Register() {
                 <View>
                     <View className="space-y-3 mt-20 flex flex-col items-center">
                         <TextInput
-                            onChangeText={(UserEmail) =>
-                                setUserEmail(UserEmail)
+                            onChangeText={(userName) =>
+                                setUserName(userName)
                             }
                             className="w-80 border-2 border-gray-200 px-3 py-2 mx-auto rounded-full"
                             placeholder="Enter Full Name"
