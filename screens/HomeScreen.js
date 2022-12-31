@@ -1,7 +1,7 @@
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import { Image, SafeAreaView, ScrollView, Text, View } from "react-native";
-import { logo } from "../CONSTANTS";
+import { logo, resturantsData, tastyDiscounts } from "../CONSTANTS";
 import CONSTANTS from "../CONSTANTS";
 import Categories from "../components/Categories";
 import FeaturedRow from "../components/FeaturedRow";
@@ -45,16 +45,19 @@ export default function HomeScreen() {
                     title="Featured"
                     description="Exciting Deals from your partners"
                     category="featured"
+                    resturants={resturantsData}
                 />
                 <FeaturedRow
                     title="Tasty Discounts"
                     description="Exciting Deals from your partners"
                     category="discounts"
+                    resturants={tastyDiscounts}
                 />
                 <FeaturedRow
                     title="Offers Near you"
                     description="Exciting Deals from your partners"
                     category="offers"
+                    resturants={resturantsData}
                 />
             </ScrollView>
         </SafeAreaView>

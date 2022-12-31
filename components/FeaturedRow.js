@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "react-native-heroicons/outline";
 import ResturantFoodCards from "./ResturantFoodCards";
 import { resturantsData } from "../CONSTANTS";
 const FeaturedRow = (props) => {
-    const [resturants, setResturants] = useState(resturantsData);
+  
     return (
         <View>
             <View className="mt-4 flex-row items-center justify-between px-4">
@@ -27,7 +27,7 @@ const FeaturedRow = (props) => {
                 className="pt-4 "
             >
                 {/* Resturant Food Cards */}
-                {resturants.map((res) => {
+                {props.resturants.map((res) => {
                     return (
                         <ResturantFoodCards
                             key={res.id}

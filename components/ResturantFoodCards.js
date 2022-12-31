@@ -37,6 +37,9 @@ const ResturantFoodCards = (props) => {
                 <Text className="text-xl font-bold text-gray-800">
                     {props.title}
                 </Text>
+                <Text className="text-sm  text-gray-600 mb-2">
+                    {props.location}
+                </Text>
 
                 <View className="flex-row space-x-1 items-center ">
                     <StarIcon color="#FFB100" size={20} />

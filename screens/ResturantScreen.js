@@ -43,9 +43,9 @@ const ResturantScreen = () => {
                     <Text>{resturant.rating}</Text>
                 </View>
             </View>
-
+            {/* 
             <Text>{totalItems}</Text>
-            <Text>{totalPrice}</Text>
+            <Text>{totalPrice}</Text> */}
             <View className="p-3">
                 {dishesData.map((dish, index) => {
                     return (
