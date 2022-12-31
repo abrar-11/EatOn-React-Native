@@ -130,11 +130,11 @@ export default function Register() {
                         </TouchableOpacity>
                         <Text
                             className="text-lg text-gray-600 mt-8"
-                            onPress={() => navigation.navigate("Home")}
+                            onPress={() => navigation.navigate("login")}
                         >
                             Already a member ?{" "}
                             <Text
-                                onPress={() => navigation.navigate("Home")}
+                                onPress={() => navigation.navigate("login")}
                                 className="text-gray-800 font-bold capitalize"
                             >
                                 login

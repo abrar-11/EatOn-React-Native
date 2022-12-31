@@ -30,9 +30,9 @@ export default function HomeScreen() {
                         }}
                     />
                 </View>
-                <View className=" flex-1">
+                {/* <View className=" flex-1">
                     <Text>Home</Text>
-                </View>
+                </View> */}
             </View>
 
             {/* Body */}

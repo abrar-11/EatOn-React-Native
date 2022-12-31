@@ -16,6 +16,7 @@ const Categories = () => {
                 categories.map((category,index)=>{
                     return(
                         <CategoriesCard
+                        key={index}
                         imgUrl={category.imgUrl}
                         title={category.title}
                     />
