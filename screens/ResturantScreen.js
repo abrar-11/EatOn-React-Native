@@ -35,7 +35,7 @@ const ResturantScreen = () => {
             <View className="p-3">
                 <Text className="text-3xl font-bold">{resturant.title}</Text>
                 <Text className="text-md text-gray-700 font-semibold">
-                    {resturant.description} 
+                    {resturant.description}
                 </Text>
 
                 <View className="flex-row space-x-1 items-center my-2 ">
@@ -62,7 +62,15 @@ const ResturantScreen = () => {
             </View>
 
             {totalItems > 0 && (
-                <Text className="focus:outline-none text-white bg-red-500 hover:bg-red-600 focus:ring-4 font-medium rounded-full text-sm px-3 py-4 shadow  w-96 text-center mx-auto mb-10">
+                <Text
+                    className="focus:outline-none text-white bg-red-500 hover:bg-red-600 focus:ring-4 font-medium rounded-full text-sm px-3 py-4 shadow  w-96 text-center mx-auto mb-10"
+                    onPress={() => {
+                        navigation.navigate("checkout", {
+                            totalItems: totalItems,
+                            totalPrice: totalPrice,
+                        });
+                    }}
+                >
                     CheckOut
                 </Text>
             )}
