@@ -16,7 +16,7 @@ export default function App() {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="splash" component={SplashScreen} />
-                <Stack.Screen name="login" component={LoginPage} />
+                <Stack.Screen name="login" component={LoginPage} /> npx create-expo-app AppName
                 <Stack.Screen name="register" component={Register} />
                 <Stack.Screen name="home" component={HomeScreen} />
                 <Stack.Screen name="resturant" component={ResturantScreen} />
